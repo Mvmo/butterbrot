@@ -20,7 +20,9 @@ fn main() {
         for i in buffer.iter_mut() {
             count += 1;
 
-            if count >= 50000 {
+            let j = (WIDTH * HEIGHT) / 2;
+
+            if count >= j {
                 *i = 0xAA;
             } else {
                 *i = 0xFF;
